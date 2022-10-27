@@ -24,4 +24,21 @@ public class Tester {
 	 // funciona correctamente
 	 }
 	}
+	
+	@Test
+	public void testBienEscrito1() throws Exception {
+	 assertEquals("cba", paciente.inverso("abc"));
+	}
+	
+	@Test(expected = Exception.class)
+	public void testMalEscrito1() throws Exception {
+	 assertEquals("cba", paciente.inverso("abc"));
+	}
+	
+	@Test
+	public void testMalEscrito2() throws Exception {
+	 assertEquals(null, paciente.inverso(null));
+	}
+
+
 }
